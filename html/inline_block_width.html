@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {display: flex; justify-content: center; padding: 30px 0;}
+        .box-tit {color: #fff; text-align: center; background: #333; border-radius: 5px;}
+        .box-sub-tit {text-align: center;}
+        .row {text-align: center;}
+        .row .inline-tag {width: 100px; background: lime;}
+        .row .inline-tag.chg-db {display: block;}
+        .row .inline-block-tag {display: inline-block; width: 100px; background: #ffd900;}
+        .row .block-tag {width: 100px; background: hsl(357, 100%, 50%);}
+        .row .block-tag.chg-inline {display: inline;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="box inline-box">
+                <h2 class="box-tit">inline</h2>
+                <h3 class="box-sub-tit">css width가 적용되지 않음</h3>
+                <div class="row">
+                    <span class="inline-tag">inline</span>
+                    <span class="inline-tag">inline</span>
+                    <span class="inline-tag">inline</span>
+                    <span class="inline-tag">inline</span>
+                    <span class="inline-tag">inline</span>
+                </div>
+            </div>
+            <div class="box inline-box">
+                <h2 class="box-tit">inline</h2>
+                <h3 class="box-sub-tit">display를 block으로 변경하면 width가 적용됨</h3>
+                <div class="row">
+                    <span class="inline-tag chg-db">inline</span>
+                    <span class="inline-tag chg-db">inline</span>
+                    <span class="inline-tag chg-db">inline</span>
+                    <span class="inline-tag chg-db">inline</span>
+                    <span class="inline-tag chg-db">inline</span>
+                </div>
+            </div>
+            
+            <div class="box inline-block-box">
+                <h2 class="box-tit">inline-block</h2>
+                <h3 class="box-sub-tit">css width가 적용됨</h3>
+                <div class="row">
+                    <span class="inline-block-tag">inline-block</span>
+                    <span class="inline-block-tag">inline-block</span>
+                    <span class="inline-block-tag">inline-block</span>
+                    <span class="inline-block-tag">inline-block</span>
+                    <span class="inline-block-tag">inline-block</span>
+                </div>
+            </div>
+            
+            <div class="box block-box">
+                <h2 class="box-tit">block</h2>
+                <h3 class="box-sub-tit">css width가 적용됨</h3>
+                <div class="row">
+                    <div class="block-tag">block</div>
+                    <div class="block-tag">block</div>
+                    <div class="block-tag">block</div>
+                    <div class="block-tag">block</div>
+                    <div class="block-tag">block</div>
+                </div>
+            </div>
+
+            <div class="box block-box">
+                <h2 class="box-tit">block</h2>
+                <h3 class="box-sub-tit">display를 inline으로 변경하면 css width가 적용안됨됨됨</h3>
+                <div class="row">
+                    <div class="block-tag chg-inline">block</div>
+                    <div class="block-tag chg-inline">block</div>
+                    <div class="block-tag chg-inline">block</div>
+                    <div class="block-tag chg-inline">block</div>
+                    <div class="block-tag chg-inline">block</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+    <title>footer</title>
+    <style>
+      .background {
+        width: 1920px;
+        height: 300px;
+        margin: 1px 0 0;
+        padding: 50px 578px 50px 320px;
+        background-color: #ebebeb;
+        box-sizing: border-box;
+        /*  HTML에서는 기본적으로 content-box;가 적용되고 이 때 width와 height는 콘텐츠 영역의 크기만 설정됨.
+            즉, padding과 border는 width와 height에 포함되지 않고, 추가로 계산되므로 최종 크기는 300px + padding이 됨
+            반면에 border-box는 width와 height가 전체 박스 크기를 의미함. */
+      }
+      .container {
+        width: 1022px;
+        height: 200px;
+      }
+      .section-connect {
+        width: 290px;
+        height: 105px;
+        margin: 0 732px 39px 0;
+      }
+      .Connect {
+        width: 94px;
+        height: 35px;
+        margin: 0 196px 20px 0;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        /* font-stretch: normal;  글꼴 폭 조절, 대부분 폰트에서 normal 외에 지원이 안됨 -> 필요없는 설정정 */
+        /* font-style: normal; 기울임 적용. 상위 스타일에서 italic 등을 상속받았을 때 되돌리기 위해 normal 사용. 지금은 필요없음 */
+        line-height: 1.25;
+        letter-spacing: -0.6px;
+        text-align: left;
+        color: #333;
+      }
+      .section-sns {
+        width: 290px;
+        height: 50px;
+        margin: 20px 0 0;
+        display: flex; /* 가로 정렬 */
+      }
+      img.icons {
+        width: 50px;
+        height: 50px;
+        margin: 0 10px 0 0;
+        object-fit: contain; 
+        /* object-fit 속성은 이미지나 영상(비디오)을 부모 요소 안에서 어떻게 맞출지 결정하는 속성
+           contain은 이미지 비율을 유지하면서 부모 요소 안에 최대한 맞추는 옵션 
+           슬라이드, 로고 배치, 썸네일 갤러리 같은 이미지가 깨지면 안되는 UI에 적합합*/
+      }
+      .address {
+        width: 1022px;
+        height: 56px;
+        margin: 39px 0 0;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 1;
+        letter-spacing: -0.4px;
+        text-align: left;
+        color: #333;
+      }
+      .address span {
+        display: block;
+        margin-bottom: 20px; /* 줄바꿈 간격 조정 */
+      }
+
+      .address .separator {
+        display: inline-block; /* block처럼 width, height 적용 가능하지만 inline처럼 줄바꿈 없음 */
+        margin: 0 10px; /* &nbsp; 4개 만큼의 공백 적용 */
+      }
+    </style>
+  </head>
+  <body>
+    <footer>
+      <div class="background">
+        <div class="container">
+          <div class="section-connect">
+            <span class="Connect"> Connect </span>
+            <div class="section-sns">
+              <img src="/image/sns/tw.png" class="icons" />
+              <img src="/image/sns/fb.png" class="icons" />
+              <img src="/image/sns/insta.png" class="icons" />
+              <img src="/image/sns/link.png" class="icons" />
+              <img src="/image/sns/yt.png" class="icons" />
+              
+            </div>
+          </div>
+          <div class="address">
+            <span>지멘스 헬시니어스 주식회사 개인 정보 정책 쿠키 정책 이용약관 취소정책</span>
+            <span>
+              대표자: 이명균
+              <span class="separator">|</span>
+              사업자등록번호: 631-88-00762
+              <span class="separator">|</span>
+              주소: 서울특별시 서초구 서초대로74길 14(더에셋), 10층 / 우편번호 06620
+              <span class="separator">|</span>
+              대표전화: 02-3450-0400
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
